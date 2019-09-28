@@ -1,4 +1,4 @@
-package Aula1;
+package ExercicioUm;
 
 import java.util.ArrayList;
 
@@ -19,9 +19,9 @@ public class MainMyThread {
 			// Adicionando thread a listaDeThreds
 			listaDeThreads.add(t1);
 		}
-		
+
 		// interrupt
-		
+
 		try {
 			// Adicionando o tempo a funcao sleep
 			MyThread.sleep(1000);
@@ -32,7 +32,7 @@ public class MainMyThread {
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
-		
+
 		// join
 
 		try {

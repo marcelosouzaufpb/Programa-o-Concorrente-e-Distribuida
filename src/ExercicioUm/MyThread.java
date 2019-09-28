@@ -1,4 +1,4 @@
-package Aula1;
+package ExercicioUm;
 
 public class MyThread extends Thread {
 
