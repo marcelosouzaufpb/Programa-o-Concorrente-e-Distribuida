@@ -1,4 +1,4 @@
-package ExercicioDois;
+package Exercicio02;
 
 import java.awt.Color;
 import java.awt.event.ActionEvent;
