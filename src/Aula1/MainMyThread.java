@@ -32,6 +32,18 @@ public class MainMyThread {
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
+		
+		// join
 
+		try {
+			// Utilizando funcao join para fazer com que as threads esperem
+			for (int i = 0; i < NUM_THREADS; i++) {
+				listaDeThreads.get(i).join();
+			}
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+
+		System.out.println("ALL DONE!");
 	}
 }
