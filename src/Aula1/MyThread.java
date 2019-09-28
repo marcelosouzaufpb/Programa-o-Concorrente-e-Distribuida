@@ -1,7 +1,8 @@
 package Aula1;
+
 public class MyThread extends Thread {
 
-	// Costrutor 
+	// Costrutor
 	public MyThread(int i) {
 		super("Thread: " + i);
 	}
@@ -11,13 +12,13 @@ public class MyThread extends Thread {
 	public void run() {
 		try {
 			while (true) {
-				// Printe dos nomes das threads 
+				// Printe dos nomes das threads
 				System.out.println(getName());
-				// Funcao para dormir as threds por um valor randomico 
-				sleep((long)(Math.random()));
+				// Funcao para dormir as threds por um valor randomico
+				sleep((long) (Math.random()));
 			}
 		} catch (InterruptedException e) {
-			// Execao esperada 
+			// Execao esperada
 		}
 	}
 }
