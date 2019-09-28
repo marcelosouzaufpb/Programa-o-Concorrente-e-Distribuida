@@ -12,12 +12,26 @@ public class MainMyThread {
 		ArrayList<Thread> listaDeThreads = new ArrayList<Thread>();
 		// For com para gerar threads
 		for (int i = 0; i < NUM_THREADS; i++) {
-			//Thread criada a partir de cada novo laco do for 
+			// Thread criada a partir de cada novo laco do for
 			MyThread t1 = new MyThread(i);
-			//Funcao inicio da thread
+			// Funcao inicio da thread
 			t1.start();
-			//Adicionando thread a listaDeThreds
+			// Adicionando thread a listaDeThreds
 			listaDeThreads.add(t1);
 		}
+		
+		// interrupt
+		
+		try {
+			// Adicionando o tempo a funcao sleep
+			MyThread.sleep(1000);
+			// Interropendo o funcionamento das threads com base na interacao do for
+			for (int i = 0; i < NUM_THREADS; i++) {
+				listaDeThreads.get(i).interrupt();
+			}
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+
 	}
 }
